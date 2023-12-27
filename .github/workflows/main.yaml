@@ -4,6 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Chandolkar001/test_github_actions@d9601574bc2594847854d21c3e39189277998f27
+      - uses: Chandolkar001/test_github_actions@5daace0c992a04ee528bdb858e86fd108e42625f
         with:
           who-to-greet: 'Tron'
