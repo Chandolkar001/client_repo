@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: Chandolkar001/test_github_actions@006d604a20aeb3a581c070427b20e14772bfb9ca
+        uses: Chandolkar001/test_github_actions@d9601574bc2594847854d21c3e39189277998f27
         with:
           who-to-greet: 'Tron'
