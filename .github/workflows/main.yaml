@@ -10,5 +10,5 @@ jobs:
         uses: Chandolkar001/test_github_actions@v1
         with:
           who-to-greet: 'Tron'
-      - run: echo random-number ${{ steps.foo.outputs.random-num }}
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
