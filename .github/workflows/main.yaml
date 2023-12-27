@@ -5,5 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: Chandolkar001/test_github_actions@5daace0c992a04ee528bdb858e86fd108e42625f
-        with:
-          who-to-greet: 'Tron'
+        
