@@ -8,7 +8,7 @@ jobs:
         id: hello  
         uses: Chandolkar001/test_github_actions@d3ce9d73ff615ce250885d6315df905b9e9acbd8
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Shreyas'
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
         
