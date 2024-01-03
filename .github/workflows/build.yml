@@ -15,4 +15,4 @@ jobs:
 
       - name: Run Commands in Container
         run: 
-          ls
+          docker ps
