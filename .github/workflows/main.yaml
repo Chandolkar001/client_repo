@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Start docker action
+      - name: Start docker
         id: hello  
         uses: Chandolkar001/test_github_actions@f454cae4219a65a77e7a97fc63f8ab8112f72ca3
       #   with:
