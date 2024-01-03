@@ -4,5 +4,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: Chandolkar001/test_github_actions@00dd15d562efe9bd9065b6ad08e85c43b1e105de
+      - name: Start docker action
+        id: hello  
+        uses: Chandolkar001/test_github_actions@d3ce9d73ff615ce250885d6315df905b9e9acbd8
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
         
