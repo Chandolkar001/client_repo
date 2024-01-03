@@ -15,4 +15,5 @@ jobs:
 
       - name: Run Commands in Container
         run: 
-          docker ps
+          if [ -f /proc/1/cgroup ] && grep -q docker /proc/1/cgroup; then echo "Inside Docker container"; else echo "Not inside Docker container"; fi
+
