@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Start docker
         id: hello  
-        uses: Chandolkar001/test_github_actions@ed60fd143a4ae9345a9cdebcb48a91b3084ef666
+        uses: Chandolkar001/test_github_actions@cb456330e95368ad2230b5acbc32c0c70ac2ef93
       #   with:
       #     who-to-greet: 'Shreyas'
       # - name: Get the output time
