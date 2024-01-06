@@ -1,13 +1,14 @@
 on: [push]
 
 jobs:
-  build:
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-      - name: Start docker
-        id: hello  
-        uses: Chandolkar001/test_github_actions@fccc814828bce57150e99ab8e346b605fb6c4ec3
+      - name: Hello world action step
+        id: hello
+        uses: Chandolkar001/test-github-actions@b452fe0f04ac9e77cbe126ee3d80e447300070aa
         with:
-          who-to-greet: 'Shreyas'
-
-        
+          who-to-greet: 'Mona the Octocat'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
