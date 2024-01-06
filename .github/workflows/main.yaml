@@ -6,9 +6,8 @@ jobs:
     steps:
       - name: Start docker
         id: hello  
-        uses: Chandolkar001/test_github_actions@8c023c215172e165835abc094823c4965e704337
+        uses: Chandolkar001/test_github_actions@fccc814828bce57150e99ab8e346b605fb6c4ec3
         with:
           who-to-greet: 'Shreyas'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+
         
