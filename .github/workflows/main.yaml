@@ -4,6 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout files
+        uses: actions/checkout@v3
       - name: Start docker
         id: hello  
         uses: Chandolkar001/test_github_actions@7c4ef47fe2831aa0d42ecea0a2d4355a01a9d602
