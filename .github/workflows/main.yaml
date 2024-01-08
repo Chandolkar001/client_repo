@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Start docker image
         id: hello  
-        uses: Chandolkar001/test_github_actions@230a5bff4cfd4ee9024c578ca92ffacbcdc9c169
+        uses: Chandolkar001/test_github_actions@792270fde2cefd629aa725757a1a98963284e264
         with:
           who-to-greet: 'file.txt'
       - name: Get the output time
