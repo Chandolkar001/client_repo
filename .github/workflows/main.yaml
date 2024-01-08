@@ -6,11 +6,9 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-        with:
-          path: '/check'
       - name: Start docker image
         id: hello  
-        uses: Chandolkar001/test_github_actions@c42b8d0dfb67884083018286e8d3a0b3d943d4d8
+        uses: Chandolkar001/test_github_actions@6b049c721dee65881ecbcd584988f32492c5ea10
         with:
           who-to-greet: 'file.txt'
       - name: Get the output time
