@@ -11,6 +11,5 @@ jobs:
         uses: Chandolkar001/test_github_actions@30ee7a03d5680946d5daae74719eda399d6f2827
         with:
           who-to-greet: 'file.txt'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+
         
