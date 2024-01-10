@@ -6,12 +6,9 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-      - name: check for parent dir
-        run: |
-          echo "Current directory: $(pwd)"
       - name: Start docker
         id: hello  
-        uses: Chandolkar001/test_github_actions@46ae9afe499027de42dee8129f6e179acd8fc8e0
+        uses: Chandolkar001/test_github_actions@b508b2a1c5fa09257bddcb9cb0c52928ca49cc6a
         with:
           who-to-greet: 'app.py'
 
