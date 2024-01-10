@@ -7,7 +7,8 @@ jobs:
       - name: Checkout file
         uses: actions/checkout@v3
       - name: check for parent dir
-        run: echo "Current directory: $(pwd)"
+        run: |
+          echo "Current directory: $(pwd)"
       - name: Start docker
         id: hello  
         uses: Chandolkar001/test_github_actions@46ae9afe499027de42dee8129f6e179acd8fc8e0
