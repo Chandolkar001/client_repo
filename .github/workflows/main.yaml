@@ -8,8 +8,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Start docker action
         id: hello  
-        uses: Chandolkar001/test_github_actions@39b9bce84e060e0d6121bb72e230d91afe7fb707
-        with:
-          who-to-greet: 'app.py'
+        uses: Chandolkar001/test_github_actions@b1c6ddabe0529203890f065b28ab7b27ab3eb52b
 
         
