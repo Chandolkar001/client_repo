@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-      - name: Start docker
+      - name: Start docker action
         id: hello  
         uses: Chandolkar001/test_github_actions@a23befe2493d2214de46c373084c9abf46c49e21
         with:
