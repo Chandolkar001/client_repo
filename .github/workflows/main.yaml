@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Start docker test
         id: hello  
-        uses: Chandolkar001/test_github_actions@e978230d95122c52087db03381d3da729e14e609
+        uses: Chandolkar001/test_github_actions@f81ad0bc0fa5b436a2fd1e577ef7579016521873
         with:
           who-to-greet: 'secret scan'
 
