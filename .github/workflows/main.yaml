@@ -10,6 +10,6 @@ jobs:
         id: hello  
         uses: Chandolkar001/test_github_actions@f5d93c34d94b10d232f5efe51899aa5d8f4a88e1
         with:
-          who-to-greet: 'vulnerability scan'
+          who-to-greet: 'secret-scan'
 
         
