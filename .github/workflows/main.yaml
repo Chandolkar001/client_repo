@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Start docker 
         id: hello  
-        uses: Chandolkar001/test_github_actions@698aa3a2c67063dfed4d596ab1ffb7f727efefac
+        uses: Chandolkar001/test_github_actions@97c079157c682f855c60a3ab7d6c90c422cfa9e0
         with:
           who-to-greet: 'vulnerability scan'
 
