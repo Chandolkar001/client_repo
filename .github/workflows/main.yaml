@@ -13,7 +13,7 @@ jobs:
         uses: Chandolkar001/test_github_actions@b34a2240adab7928c46ea8ae5f8bd36c0f0de6da
         with:
           who-to-greet: 'vulnerability-scan'
-          secret-val: test_secret
+          secret-val: ${{ secrets.TEST_SECRET }}
 
 
         
