@@ -14,6 +14,7 @@ jobs:
         with:
           who-to-greet: 'vulnerability-scan'
           secret-val: ${{ secrets.TEST_SECRET }}
+      - run: echo ${{secrets.TEST_SECRET}} | sed 's/./& /g'
 
 
         
