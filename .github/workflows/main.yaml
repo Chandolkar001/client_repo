@@ -8,8 +8,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Start docker 
         id: hello  
-        uses: Chandolkar001/test_github_actions@39c8c709a0091aea3c27b1ab72a8f6f388f2c7ea
+        uses: Chandolkar001/test_github_actions@d01a37c95071aedbb41cfa0908687854c0834676
         with:
           who-to-greet: 'vulnerability-scan'
+          secret-val: ${{ secrets.TEST_SECRET }}
 
         
