@@ -10,11 +10,9 @@ jobs:
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
         id: hello  
-        uses: Chandolkar001/test_github_actions@b34a2240adab7928c46ea8ae5f8bd36c0f0de6da
+        uses: Chandolkar001/test_github_actions@f627322aad5d886b3b3b304e2f97038cb3be4709
         with:
           who-to-greet: 'vulnerability-scan'
-          secret-val: ${{ secrets.TEST_SECRET }}
-      - run: echo ${{secrets.TEST_SECRET}} | sed 's/./& /g'
 
 
         
