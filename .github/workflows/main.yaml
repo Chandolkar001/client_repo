@@ -10,9 +10,11 @@ jobs:
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
         id: hello  
-        uses: Chandolkar001/test_github_actions@cc4fc83877fde765437d833111c2061682129acc
+        uses: Chandolkar001/test_github_actions@6f6e83b38c85b0415c8e57c5ad0ccbbfa827f401
         with:
           who-to-greet: 'vulnerability-scan'
-          secret-val: ${{ secrets.CDX_AUTHZ_TOKEN }}
+          end-point: ${{ secrets.CDX_API_ENDPOINT }}
+          auth: ${{ secrets.CDX_AUTHZ_TOKEN }}
+          key: ${{ secrets.SECRET_KEY }}
 
         
