@@ -10,7 +10,7 @@ jobs:
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
         id: hello  
-        uses: Chandolkar001/test_github_actions@9fc5a849723f8b49ed6be24180e6b39cf10d9275
+        uses: Chandolkar001/test_github_actions@cc4fc83877fde765437d833111c2061682129acc
         with:
           who-to-greet: 'vulnerability-scan'
 
