@@ -13,6 +13,6 @@ jobs:
         uses: Chandolkar001/test_github_actions@cc4fc83877fde765437d833111c2061682129acc
         with:
           who-to-greet: 'vulnerability-scan'
-
+          secret-val: ${{ secrets.CDX_AUTHZ_TOKEN }}
 
         
