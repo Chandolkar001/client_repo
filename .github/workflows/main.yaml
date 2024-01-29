@@ -12,7 +12,7 @@ jobs:
       #   run: echo "$GITHUB_CONTEXT"
       - name: Set Environment Variables
         run: |
-          echo "CUSTOM_VAR=${{ github.event }}" >> $GITHUB_ENV
+          echo "GITHUB_CONTEXT=${{ github.event }}" >> $GITHUB_ENV
       - name: Start docker 
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
