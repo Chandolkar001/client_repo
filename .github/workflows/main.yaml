@@ -1,4 +1,7 @@
-on: [push]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,7 +15,7 @@ jobs:
           CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
-        uses: Chandolkar001/test_github_actions@9cd6b4e04ee6685ab0105e1476afcd47b1aa9c31
+        uses: Chandolkar001/test_github_actions@9d385bfe817052b8b18413fc103230606e342ad9
         with:
           who-to-greet: 'vulnerability-scan'
 
