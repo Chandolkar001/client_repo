@@ -6,6 +6,10 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Start docker 
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
