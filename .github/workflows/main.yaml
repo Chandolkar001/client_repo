@@ -9,7 +9,7 @@ jobs:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJSON(github.event) }}
-        run: export "$GITHUB_CONTEXT"
+        run: echo "$GITHUB_CONTEXT"
       - name: Start docker 
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
