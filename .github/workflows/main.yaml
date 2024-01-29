@@ -10,12 +10,10 @@ jobs:
       #   env:
       #     GITHUB_CONTEXT: ${{ toJSON(github.event) }}
       #   run: echo "$GITHUB_CONTEXT"
-      - name: Set Environment Variables
-        run: |
-          echo "GITHUB_CONTEXT=${{ github.event }}" >> $GITHUB_ENV
       - name: Start docker 
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
+          GITHUB_CONTEXT : ${{ toJson(github.event) }}
         id: hello  
         uses: Chandolkar001/test_github_actions@9d385bfe817052b8b18413fc103230606e342ad9
         with:
