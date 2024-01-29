@@ -12,7 +12,7 @@ jobs:
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
         id: hello  
-        uses: Chandolkar001/test_github_actions@9d385bfe817052b8b18413fc103230606e342ad9
+        uses: Chandolkar001/test_github_actions@6f6e83b38c85b0415c8e57c5ad0ccbbfa827f401
         with:
           who-to-greet: 'vulnerability-scan'
           end-point: ${{ secrets.CDX_API_ENDPOINT }}
