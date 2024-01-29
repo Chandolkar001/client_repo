@@ -7,12 +7,14 @@ jobs:
       - name: Checkout file
         uses: actions/checkout@v3
       - name: Dump GitHub context
-        run: echo "$GITHUB_CONTEXT=toJSON(github.event)" >> $GITHUB_ENV
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github.event) }}
+        run: export "$GITHUB_CONTEXT"
       - name: Start docker 
         env:
           test_secret: ${{ secrets.TEST_SECRET }}
         id: hello  
-        uses: Chandolkar001/test_github_actions@6f6e83b38c85b0415c8e57c5ad0ccbbfa827f401
+        uses: Chandolkar001/test_github_actions@9d385bfe817052b8b18413fc103230606e342ad9
         with:
           who-to-greet: 'vulnerability-scan'
           end-point: ${{ secrets.CDX_API_ENDPOINT }}
