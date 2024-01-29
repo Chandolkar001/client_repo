@@ -14,6 +14,6 @@ jobs:
           CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
         uses: Chandolkar001/test_github_actions@f186ddaa096cf72c29898f045d552bc8991d12ad
         with:
-          who-to-greet: 'secret-scan'
+          who-to-greet: 'multi-scan'
 
         
