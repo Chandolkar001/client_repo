@@ -9,12 +9,15 @@ jobs:
       - name: Scan
         env:
           CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
           CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
         uses: Chandolkar001/test_github_actions@81ab4e08dc76bd8bf815c05702cbd0b45de04b87
         with:
           who-to-greet: 'multi-scan'
           event: ${{ toJson(github.event) }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: dist
 
 
         
