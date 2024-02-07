@@ -6,16 +6,16 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-      - name: Scan
-        env:
-          CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
-          CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
-        uses: Chandolkar001/test_github_actions@81ab4e08dc76bd8bf815c05702cbd0b45de04b87
-        with:
-          who-to-greet: 'multi-scan'
-          event: ${{ toJson(github.event) }}
+      # - name: Scan
+      #   env:
+      #     CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
+      #     CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
+      #   uses: Chandolkar001/test_github_actions@81ab4e08dc76bd8bf815c05702cbd0b45de04b87
+      #   with:
+      #     who-to-greet: 'multi-scan'
+      #     event: ${{ toJson(github.event) }}
       - uses: actions/upload-artifact@v3
-        with:
+        with: 
           name: Build
           path: dist
 
