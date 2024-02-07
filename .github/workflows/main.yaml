@@ -8,12 +8,13 @@ jobs:
         uses: actions/checkout@v3
       - name: Scan
         env:
-          GITHUB_CONTEXT : ${{ toJson(github.event) }}
           CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
-        uses: Chandolkar001/test_github_actions@f186ddaa096cf72c29898f045d552bc8991d12ad
+        uses: Chandolkar001/test_github_actions@9c972a478cb8458c65c79f33bd0d12119a16545c
         with:
           who-to-greet: 'multi-scan'
+          event: ${{ toJson(github.event) }}
+
 
         
