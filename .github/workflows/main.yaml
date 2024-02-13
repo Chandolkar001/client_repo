@@ -6,14 +6,16 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-      - name: Scan
-        env:
-          GITHUB_CONTEXT : ${{ toJson(github.event) }}
-          CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
-        uses: Chandolkar001/test_github_actions@8e1b2e0fb28853568eed516f0a8eb2e87a17d629
-        with:
-          who-to-greet: 'multi-scan'
+      # - name: Scan
+      #   env:
+      #     GITHUB_CONTEXT : ${{ toJson(github.event) }}
+      #     CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
+      #     SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      #     CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
+      #   uses: Chandolkar001/test_github_actions@8e1b2e0fb28853568eed516f0a8eb2e87a17d629
+      #   with:
+      #     who-to-greet: 'multi-scan'
+      - run: |
+        echo "::warning file=test.js,line=1,col=5,endColumn=7::Missing semicolon"
 
         
