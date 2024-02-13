@@ -16,6 +16,7 @@ jobs:
       #   with:
       #     who-to-greet: 'multi-scan'
       - run: |
-        echo "::warning file=test.js,line=1,col=5,endColumn=7::Missing semicolon"
+        text="This is a Warning"
+        echo "::warning file=test.js,line=1,col=5::$text"
 
         
