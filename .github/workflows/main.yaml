@@ -7,7 +7,6 @@ jobs:
       - name: Checkout file
         uses: actions/checkout@v3
       - name: Scan
-        env:
         uses: Chandolkar001/test_github_actions@c9ff33c9ac314db6d56a0b3be476dcbbd3ee8acd
         with:
           who-to-greet: 'secret-scan'
