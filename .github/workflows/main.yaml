@@ -6,17 +6,14 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-      # - name: Scan
-      #   env:
-      #     GITHUB_CONTEXT : ${{ toJson(github.event) }}
-      #     CDX_AUTHZ_TOKEN: ${{ secrets.CDX_AUTHZ_TOKEN }}
-      #     SECRET_KEY: ${{ secrets.SECRET_KEY }}
-      #     CDX_API_ENDPOINT: ${{ secrets.CDX_API_ENDPOINT }}
-      #   uses: Chandolkar001/test_github_actions@8e1b2e0fb28853568eed516f0a8eb2e87a17d629
-      #   with:
-      #     who-to-greet: 'multi-scan'
-      - run: |
-        text="This is a Warning"
-        echo "::warning file=test.js,line=1,col=5::$text"
+      - name: Scan
+        env:
+        uses: Chandolkar001/test_github_actions@c9ff33c9ac314db6d56a0b3be476dcbbd3ee8acd
+        with:
+          who-to-greet: 'secret-scan'
+          github-context : ${{ toJson(github.event) }}
+          auth-token: ${{ secrets.AUTH_TOKEN }}
+          api-endpoint: ${{ secrets.API_ENDPOINT }}
+
 
         
