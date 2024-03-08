@@ -7,7 +7,7 @@ jobs:
       - name: Checkout file
         uses: actions/checkout@v3
       - name: main 
-        uses: Chandolkar001/test_github_actions@388b9b4d310bd7a973b143051b3165daf5fe5367
+        uses: Chandolkar001/test_github_actions@f1db9551a844a2bf5d758b85552ebbd1a9102ccb
         with:
           who-to-greet: 'secret-scan'
           github-context : ${{ toJson(github.event) }}
