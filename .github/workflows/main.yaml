@@ -9,7 +9,7 @@ jobs:
       - name: main scan
         uses: Chandolkar001/test_github_actions@965a4a824934a33b926df5b52d7756a78ead8658
         with:
-          who-to-greet: 'vulnerability-scan'
+          who-to-greet: 'secret-scan'
           github-context : ${{ toJson(github.event) }}
           auth-token: ${{ secrets.AUTH_TOKEN }}
           api-endpoint: ${{ secrets.API_ENDPOINT }}
