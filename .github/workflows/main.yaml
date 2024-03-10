@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout file
         uses: actions/checkout@v3
-      - name: main 
+      - name: main scan
         uses: Chandolkar001/test_github_actions@17435f3bbd6a432507fa8ae1812780c7535b977e
         with:
           who-to-greet: 'all'
