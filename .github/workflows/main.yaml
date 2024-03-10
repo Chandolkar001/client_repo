@@ -7,13 +7,13 @@ jobs:
       - name: Checkout file
         uses: actions/checkout@v3
       - name: main 
-        uses: Chandolkar001/test_github_actions@924ad88d681d7bc9ae45561106c6dd9cdcb21ecb
+        uses: Chandolkar001/test_github_actions@aa71c9950d6a7d1a3398bb199505a40abfcdf472
         with:
           who-to-greet: 'secret-scan'
           github-context : ${{ toJson(github.event) }}
           auth-token: ${{ secrets.AUTH_TOKEN }}
           api-endpoint: ${{ secrets.API_ENDPOINT }}
-          debug: 'true'
+          debug: 'True'
 
 
         
