@@ -13,7 +13,7 @@ jobs:
           github-context : ${{ toJson(github.event) }}
           auth-token: ${{ secrets.AUTH_TOKEN }}
           api-endpoint: ${{ secrets.API_ENDPOINT }}
-          debug: 'True'
+          debug: 'Frue'
 
 
         
