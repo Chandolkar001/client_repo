@@ -7,7 +7,7 @@ jobs:
       - name: Checkout file
         uses: actions/checkout@v3
       - name: main scan
-        uses: Chandolkar001/test_github_actions@965a4a824934a33b926df5b52d7756a78ead8658
+        uses: Chandolkar001/test_github_actions@7956eb1a35c632e8f40efa954a034e658da1bc82
         with:
           who-to-greet: 'vulnerability-scan'
           github-context : ${{ toJson(github.event) }}
