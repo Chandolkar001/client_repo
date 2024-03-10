@@ -9,7 +9,7 @@ jobs:
       - name: main scan
         uses: Chandolkar001/test_github_actions@7956eb1a35c632e8f40efa954a034e658da1bc82
         with:
-          who-to-greet: 'all'
+          who-to-greet: 'secret-scan'
           github-context : ${{ toJson(github.event) }}
           auth-token: ${{ secrets.AUTH_TOKEN }}
           api-endpoint: ${{ secrets.API_ENDPOINT }}
