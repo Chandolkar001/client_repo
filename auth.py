@@ -8,7 +8,7 @@ import json
 import os
 #     git_props["env_var"] = {var: os.environ.get(var) for var in env_var}
 
-
+"hi"
 # from requests.adapters import HTTPAdapter, Retry
 KEY = "hii"
 logging.basicConfig(level=logging.ERROR)
