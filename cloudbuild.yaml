@@ -6,16 +6,4 @@ steps:
   args: ['/entrypoint.sh']
 options:
   automapSubstitutions: true
-  # env:
-  # - 'TRIGGER_NAME=$TRIGGER_NAME'
-  # - 'COMMIT_SHA=$COMMIT_SHA'
-  # - 'REVISION_ID=$REVISION_ID'
-  # - 'SHORT_SHA=$SHORT_SHA '
-  # - 'REPO_NAME=$REPO_NAME'
-  # - 'REPO_FULL_NAME=$REPO_FULL_NAME'
-  # - 'BRANCH_NAME=$BRANCH_NAME'
-  # - 'TAG_NAME=$TAG_NAME'
-  # - 'REF_NAME=$REF_NAME'
-  # - 'TRIGGER_BUILD_CONFIG_PATH=$TRIGGER_BUILD_CONFIG_PATH'
-  # - 'SERVICE_ACCOUNT_EMAIL=$SERVICE_ACCOUNT_EMAIL'
-  # - 'SERVICE_ACCOUNT=$SERVICE_ACCOUNT'
+  substitutionOption: ALLOW_LOOSE
