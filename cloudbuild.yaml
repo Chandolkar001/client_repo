@@ -1,10 +1,11 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['pull', 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.2']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['pull', 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.2']
 
-  - name: 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.2'
-    args: ['/entrypoint.sh']
-  options:
-    automapSubstitutions: true
-  substitutions:
-    _USER: "Google Cloud"
+- name: 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.2'
+  args: ['/entrypoint.sh']
+
+options:
+  automapSubstitutions: true
+substitutions:
+  _USER: "Google Cloud"
