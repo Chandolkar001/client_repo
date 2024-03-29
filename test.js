@@ -1,5 +1,5 @@
 // vulnerable_code.js
-
+// 
 // Example 1: Command Injection
 const exec = require('child_process').exec;
 const userInput = process.argv[2];
