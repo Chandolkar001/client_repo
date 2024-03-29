@@ -4,6 +4,8 @@ steps:
 
 - name: 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3'
   args: ['/entrypoint.sh']
+options:
+  automapSubstitutions: true
   # env:
   # - 'TRIGGER_NAME=$TRIGGER_NAME'
   # - 'COMMIT_SHA=$COMMIT_SHA'
