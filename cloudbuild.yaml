@@ -1,11 +1,19 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['pull', 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.2']
+  args: ['pull', 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3']
 
-- name: 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.2'
+- name: 'us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3'
   args: ['/entrypoint.sh']
-
-options:
-  automapSubstitutions: true
-substitutions:
-  _USER: "Google Cloud"
+  env:
+  - 'TRIGGER_NAME=$TRIGGER_NAME'
+  - 'COMMIT_SHA=$COMMIT_SHA'
+  - 'REVISION_ID=$REVISION_ID'
+  - 'SHORT_SHA=$SHORT_SHA '
+  - 'REPO_NAME=$REPO_NAME'
+  - 'REPO_FULL_NAME=$REPO_FULL_NAME'
+  - 'BRANCH_NAME=$BRANCH_NAME'
+  - 'TAG_NAME=$TAG_NAME'
+  - 'REF_NAME=$REF_NAME'
+  - 'TRIGGER_BUILD_CONFIG_PATH=$TRIGGER_BUILD_CONFIG_PATH'
+  - 'SERVICE_ACCOUNT_EMAIL=$SERVICE_ACCOUNT_EMAIL'
+  - 'SERVICE_ACCOUNT=$SERVICE_ACCOUNT'
