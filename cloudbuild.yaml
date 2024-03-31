@@ -1,6 +1,6 @@
 steps:
- name: ubuntu
-  entrypoint: bash
+- name: ubuntu
+  entrypoint: 'bash'
   args: [ "-c", 'env > env_params.txt']
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
