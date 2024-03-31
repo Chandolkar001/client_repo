@@ -6,7 +6,5 @@ steps:
   - '_PUSH_NAME=$_PUSH_NAME'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
-substitutions:
-  _PUSH_NAME : $(body.repository.name)
 options:
   automapSubstitutions: true
