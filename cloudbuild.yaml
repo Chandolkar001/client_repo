@@ -1,13 +1,10 @@
 steps:
-- name: 'ubuntu'
-  script: |
-    #!/usr/bin/env bash
-    env > env_variables.txt
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: [ "-c", 'docker run --env-file env_variables.txt -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
-  env:
-  - '_URL=$_URL'
+  args: ["env > env_params.txt"]
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: [ "-c", 'docker run --env-file env_params.txt -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
 options:
