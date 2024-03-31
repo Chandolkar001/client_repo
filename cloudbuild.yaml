@@ -2,9 +2,11 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: [ "-c", 'docker run -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan' ]
+  env:
+  - '_PUSH_NAME=$_PUSH_NAME'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
 substitutions:
-  _PUSH_NAME : $(push.repository.name)
+  _PUSH_NAME : $(body.repository.name)
 options:
   automapSubstitutions: true
