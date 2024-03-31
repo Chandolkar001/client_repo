@@ -10,3 +10,5 @@ steps:
   - '_URL=$_URL'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
+options:
+  automapSubstitutions: true
