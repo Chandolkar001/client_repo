@@ -1,11 +1,11 @@
 steps:
-- name: 'ubuntu'
-  script: |
-    #!/usr/bin/env bash
-    echo "Hello $_URL"
+# - name: 'ubuntu'
+#   script: |
+#     #!/usr/bin/env bash
+#     env > 
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: [ "-c", 'docker run -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
+  args: [ "-c", 'docker run --env-file <( env| cut -f1 -d= ) -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
   env:
   - '_URL=$_URL'
 - name: 'gcr.io/cloud-builders/docker'
