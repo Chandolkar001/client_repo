@@ -10,3 +10,4 @@ steps:
   args: ['ps']
 options:
   automapSubstitutions: true
+  substitutionOption: 'ALLOW_LOOSE'
