@@ -2,10 +2,10 @@ steps:
 - name: ubuntu
   script: |
     #!/usr/bin/env bash
-    env > env_param.txt
+    env > env_params.txt
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: [ "-c", 'docker run --env-file env_param.txt -e API_ENDPOINT=hello -e AUTH_TOKEN=hello -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
+  args: [ "-c", 'docker run --env-file env_params.txt -e API_ENDPOINT=hello -e AUTH_TOKEN=hello -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['ps']
 options:
