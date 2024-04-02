@@ -3,6 +3,7 @@ steps:
   script: |
     #!/usr/bin/env bash
     env > env_params.txt
+    echo $API_ENDPOINT
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args: [ "-c", 'docker run --env-file env_params.txt -e API_ENDPOINT=helo -e AUTH_TOKEN=hello -v /workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock us-central1-docker.pkg.dev/cloudanix-qa-303120/codescan/cloud-test:0.3 --debug True --scanType secret-scan --service github' ]
